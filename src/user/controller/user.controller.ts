@@ -33,7 +33,7 @@ export class UserController {
     return this.userService.deleteOne(Number(id));
   }
   @Put(':id')
-  deleteOne(@Param() id: string, @Body() user: User): Observable<any> {
+  deleteOne(@Param('id') id: string, @Body() user: User): Observable<any> {
     return this.userService.updateOne(Number(id), user);
   }
 }
